@@ -114,7 +114,7 @@ L'architecture utilise une imbrication de conteneurs (Nesting) pour optimiser le
 
 ---
 
-## 5. Stack GRC et Automatisation
+## 5. Stack Technique Réseau & Sécurité & GRC
 
 La chaîne d'outillage est centralisée dans la DMZ pour respecter la **Ségrégation des Tâches (SoD)**.
 
@@ -140,6 +140,18 @@ Nous adoptons une stratégie de traitement à la périphérie (**Edge Computing*
 * **Composant :** `ntopng` installé directement sur `pfsense-agence`.
 * **Rôle :** Analyseur de flux (NetFlow/IPFIX). *(Justification GRC : Permet une **détection d'anomalies locales** en temps réel, sans impact sur la bande passante inter-sites.)*
 
+| Logo | Nom | Rôle |
+| :---: | :--- | :--- |
+| <img src="https://github.com/tescalon/Homelab-Network-Secops/blob/main/docs/images/logo/ansible.png?raw=true" width="60"> | **Ansible** | **Infrastructure as Code (IaC) & Audit.** Automatisation des déploiements et vérification de la **Conformité** (Anti-Drift). |
+| <img src="https://github.com/tescalon/Homelab-Network-Secops/blob/main/docs/images/logo/pfsense.png?raw=true" width="50"> | **pfSense** | **Sécurité Périmétrique.** Firewalling, Routage inter-zones, Terminaux VPN. Cœur de la **Défense en Profondeur**. |
+| <img src="https://github.com/tescalon/Homelab-Network-Secops/blob/main/docs/images/logo/proxmox.png?raw=true" width="60"> | **Proxmox VE** | **Virtualisation & Isolation L2.** Hyperviseur Type 1 garantissant l'isolation physique virtuelle (`vmbrX`). |
+| <img src="https://github.com/tescalon/Homelab-Network-Secops/blob/main/docs/images/logo/docker.png?raw=true" width="60"> | **Docker** | **Conteneurisation sécurisée.** Orchestration de la stack GRC dans des LXC non-privilégiés. |
+| <img src="https://github.com/tescalon/Homelab-Network-Secops/blob/main/docs/images/logo/wireguard.png?raw=true" width="60"> | **WireGuard** | **Tunneling Sécurisé.** VPN Site-à-Site pour la **Confidentialité** et l'intégrité des données inter-sites. |
+| <img src="https://github.com/tescalon/Homelab-Network-Secops/blob/main/docs/images/logo/netbox.png?raw=true" width="60"> | **NetBox** | **Gouvernance & CMDB.** Unique **Source of Truth** (SoT) pour l'IPAM et l'inventaire des actifs (GRC Data Quality). |
+| <img src="https://github.com/tescalon/Homelab-Network-Secops/blob/main/docs/images/logo/librenms.png?raw=true" width="60"> | **LibreNMS** | **Supervision & Alerting.** Collecte des métriques via **SNMPv3** (chiffré) pour la **Disponibilité** et la sécurité des données de monitoring. |
+| <img src="https://github.com/tescalon/Homelab-Network-Secops/blob/main/docs/images/logo/grafana.png?raw=true" width="60"> | **Grafana** | **Visualisation & Observabilité.** Tableaux de bord *Single Pane of Glass* centralisant les KPIs (LibreNMS, ntopng). |
+| <img src="https://img.shields.io/badge/Oxidized-17202A?style=flat&logo=git&logoColor=white" width="60"> | **Oxidized** | **Audit & Traçabilité.** Versioning automatique des configurations routeurs pour la **Traçabilité des Changements** (GitOps). |
+| <img src="https://github.com/tescalon/Homelab-Network-Secops/blob/main/docs/images/logo/ntopng.png?raw=true" width="60"> | **ntopng** | **Analyse de Flux (Edge).** Détection d'anomalies et analyse comportementale du trafic à la périphérie (Agence). |
 ---
 
 ## 6. Interconnexion Sécurisée (WireGuard)
