@@ -220,6 +220,7 @@ Ce plan d'action définit les évolutions futures pour maintenir le niveau de s�
 | **VIII. Access Control** | **NAC 802.1X (RADIUS)** | Implémentation du contrôle d'accès réseau : aucun port ne s'active sans authentification du périphérique via certificats (Zero Trust au niveau Layer 2). |
 | **IX. Résilience** | **Haute Disponibilité (CARP)** | Configuration d'un cluster pfSense actif/passif avec synchronisation d'état (pfsync) pour garantir la continuité de service en cas de panne matérielle (Business Continuity Plan). |
 
+> **L'implémentation des tâches de la Roadmap (Sécurité, Audit, Résilience) est planifiée pour les prochains jours ou semaines**
 ---
 
 ## 10. ✅ Compétences Démontrées
