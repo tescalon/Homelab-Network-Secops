@@ -199,6 +199,7 @@ Ce plan d'action définit les évolutions futures pour maintenir le niveau de s�
 | Phase | Tâche | Justification GRC / Exploitation |
 | :--- | :--- | :--- |
 | **I. Sécurité** | **Durcissement SSH (Hardening)** | Désactivation totale de l'auth par mot de passe sur pfSense une fois les clés Ed25519 déployées via Ansible (Mitigation Brute-force). |
+| **I. Sécurité** | **Accès Zero Trust (Cloudflare Tunnel)** | Mise en place du Tunnel Cloudflare pour l'accès aux outils GRC/Ops (NetBox/Grafana). Élimine l'exposition publique des ports et fournit une couche d'authentification forte. |
 | **II. Audit** | **Audit de Conformité Automatisé** | Finalisation du playbook Ansible vérifiant périodiquement l'état des configurations par rapport au référentiel ("Configuration Drift"). |
 | **III. Visibilité** | **Intégration Single Pane of Glass** | Injection des données de flux **ntopng** dans les dashboards **Grafana** pour corréler métriques systèmes et comportement réseau. |
 | **IV. Data Quality** | **Fiabilisation CMDB (NetBox)** | Peupler 100% des objets pour que NetBox devienne l'unique "Source of Truth" opposable. |
