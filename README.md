@@ -232,7 +232,7 @@ La structure du répertoire du serveur d'administration prouve l'organisation de
 
 ---
 
-> **Pour une analyse complète de l'architecture, de la Matrice de Flux GRC et des 34 preuves visuelles, veuillez consulter tous les documents et les images dans le dossier `docs/`.**
+> **Pour une analyse complète de l'architecture, de la Matrice de Flux et des preuves visuelles, retrouvez tous les documents et les images dans le dossier `docs/`.**
 
 ---
 
